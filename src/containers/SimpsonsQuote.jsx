@@ -18,12 +18,14 @@ const SimpsonsQuote = () => {
   return (
     <>
       <Load onclick={handleClick} />
-      {loading ? <LoadingSpinner /> : quote &&
-        <Quote
-          image={quote.image}
-          character={quote.character}
-          quote={quote.quote} />
-      }
+      {loading ? <LoadingSpinner /> : (
+        quote && (
+          <Quote
+            image={quote.image}
+            character={quote.character}
+            quote={quote.quote} />
+        )
+      )}
     </>
   );
 };

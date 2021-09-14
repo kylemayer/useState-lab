@@ -1,10 +1,11 @@
+/* eslint-disable max-len */
 export const getQuote = async () => {
-  const response = await fetch('https://thesimpsonsquoteapi.glitch.me/quotes');
-  const results = await response.json();
+  const response = await fetch('https://thesimpsonsquoteapi.glitch.me/quotes?count=8');
+  const [quote] = await response.json();
 
-  return results.map(quote => ({
+  return {
     image: quote.image,
     character: quote.character,
     quote: quote.quote,
-  }));
+  };
 };
