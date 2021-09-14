@@ -21,7 +21,8 @@ const SimpsonsQuote = () => {
         <Quote
           image={quote.image}
           character={quote.character}
-          quote={quote.quote} />}
+          quote={quote.quote} />
+      }
     </>
   );
 };
