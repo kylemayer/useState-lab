@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Quote from '../components/quote/Quote';
 import Load from '../components/quote/Load';
+import LoadingSpinner from '../components/quote/LoadingSpinner';
 import { getQuote } from '../services/simpsonsApi';
 
 const SimpsonsQuote = () => {
@@ -17,7 +18,7 @@ const SimpsonsQuote = () => {
   return (
     <>
       <Load onclick={handleClick} />
-      {loading ? <p>Loading spinner</p> : quote &&
+      {loading ? <LoadingSpinner /> : quote &&
         <Quote
           image={quote.image}
           character={quote.character}

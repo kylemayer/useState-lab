@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React from 'react';
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import SimpsonsQuote from './SimpsonsQuote';
@@ -28,7 +29,7 @@ describe('Simpsons Quote Container', () => {
   it('displays a button that fetches a random quote', async () => {
     render(<SimpsonsQuote />);
 
-    const fetchButton = screen.getByRole('button', { name: 'Get me a quote!' });
+    const fetchButton = screen.getByRole('button', { name: 'Load a quote!' });
     fireEvent.click(fetchButton);
 
     return waitFor(() => {
