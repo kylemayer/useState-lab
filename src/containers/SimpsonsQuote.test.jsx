@@ -33,7 +33,7 @@ describe('Simpsons Quote Container', () => {
     fireEvent.click(fetchButton);
 
     return waitFor(() => {
-      screen.getByText('Doughnuts?');
+      screen.getByText('Mr. Burns - Doughnuts?');
     });
   });
 });

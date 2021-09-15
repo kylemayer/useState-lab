@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 export const getQuote = async () => {
-  const response = await fetch('https://thesimpsonsquoteapi.glitch.me/quotes?count=8');
+  const response = await fetch('https://thesimpsonsquoteapi.glitch.me/quotes');
   const [quote] = await response.json();
 
   return {

@@ -17,8 +17,10 @@ const SimpsonsQuote = () => {
 
   return (
     <>
-      <Load onclick={handleClick} />
-      {loading ? <LoadingSpinner /> : (
+      <Load handleClick={handleClick} />
+      {loading ? (
+        <LoadingSpinner />
+      ) : (
         quote && (
           <Quote
             image={quote.image}
